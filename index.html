@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>My Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            position: relative;
+            font-family: Montserrat, sans-serif;
+            padding: 60px 0 80px;
+        }
+        
+        .container {
+            margin: 0 240px;
+        }
+        
+        header {
+            text-align: center;
+        }
+        
+        header .profile-img {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+        
+        header .profile-img img {
+            width: 100%;
+            display: block;
+            border-radius: 60px;
+        }
+        
+        header .profile-name {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 15px;
+        }
+        
+        header .profile-location {
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 17px;
+            color: #A9A9A9;
+        }
+        
+        header .profile-folow {
+            margin-top: 25px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        header .profile-folow li {
+            width: 100px;
+            height: 67px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #E5E5E5;
+            border-radius: 16px;
+            margin-right: 25px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+        }
+        
+        header .profile-folow li:last-of-type {
+            margin-right: 0;
+        }
+        
+        header .profile-folow li span {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        
+        .gallary-grid {
+            margin-top: 65px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 32px;
+            grid-row-gap: 32px;
+            grid-template-areas: 'item_1 item_2 item_2' 'item_3 item_3 item_4' 'item_5 item_6 item_4';
+        }
+        
+        .gallary-grid .item-1 {
+            grid-area: item_1;
+        }
+        
+        .gallary-grid .item-2 {
+            grid-area: item_2;
+        }
+        
+        .gallary-grid .item-3 {
+            grid-area: item_3;
+        }
+        
+        .gallary-grid .item-4 {
+            grid-area: item_4;
+        }
+        
+        .gallary-grid .item-5 {
+            grid-area: item_5;
+        }
+        
+        .gallary-grid .item-6 {
+            grid-area: item_6;
+        }
+        
+        .gallary-grid .gallery-item {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .gallary-grid .gallery-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+        
+        .my-name {
+            position: absolute;
+            bottom: 1%;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            line-height: 17px;
+            color: #A9A9A9;
+        }
+        
+        @media (max-width: 940px) {
+            .container {
+                margin: 0 20px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            body {
+                padding: 30px 0 60px;
+            }
+            header .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+            header .profile-name {
+                font-size: 14px;
+                line-height: 17px;
+                margin-top: 10px;
+            }
+            header .profile-location {
+                font-size: 10px;
+                line-height: 12px;
+                margin-top: 5px;
+            }
+            header .profile-folow {
+                margin-top: 10px;
+            }
+            header .profile-folow li {
+                font-size: 12px;
+                line-height: 15px;
+            }
+            header .profile-folow li span {
+                font-size: 12px;
+            }
+            .gallary-grid {
+                margin-top: 40px;
+                grid-column-gap: 12px;
+                grid-row-gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img">
+                <img src="./images/profilePhoto.png" alt="profilePhoto">
+            </div>
+            <h1 class="profile-name">Rodney Cotton</h1>
+            <p class="profile-location">Helsinki, Finland</p>
+            <ul class="profile-folow">
+                <li>100 <span>Posts</span></li>
+                <li>2,242 <span>Follower</span></li>
+                <li>1,432 <span>Following</span></li>
+            </ul>
+        </header>
+        <div class="gallary-grid">
+            <div class="gallery-item item-1">
+                <img src="./images/photo1.png" alt="photo1">
+            </div>
+            <div class="gallery-item item-2">
+                <img src="./images/photo2.png" alt="photo2">
+            </div>
+            <div class="gallery-item item-3">
+                <img src="./images/photo3.png" alt="photo3">
+            </div>
+            <div class="gallery-item item-4">
+                <img src="./images/photo4.png" alt="photo4">
+            </div>
+            <div class="gallery-item item-5">
+                <img src="./images/photo5.png" alt="photo5">
+            </div>
+            <div class="gallery-item item-6">
+                <img src="./images/photo6.png" alt="photo6">
+            </div>
+        </div>
+    </div>
+    <p class="my-name">Linh Nguyen @ DevChallenges.io</p>
+</body>
+
+</html>
